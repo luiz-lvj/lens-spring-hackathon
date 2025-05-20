@@ -20,7 +20,7 @@ const LoginPage = () => {
     <div className="max-w-md mx-auto">
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-display">Welcome to CryptoGroups</CardTitle>
+          <CardTitle className="text-2xl font-display">Welcome to Catalyst Club</CardTitle>
           <CardDescription>Choose a user to continue</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

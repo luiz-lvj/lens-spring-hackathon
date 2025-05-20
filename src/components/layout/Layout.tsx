@@ -28,11 +28,11 @@ export function Layout({ children }: LayoutProps) {
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <h3 className="font-display font-bold text-xl">CryptoGroups</h3>
+              <h3 className="font-display font-bold text-xl">Catalyst Club</h3>
               <p className="text-sm text-gray-400">Connect, Invest, Grow</p>
             </div>
             <div className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} CryptoGroups. All rights reserved.
+              &copy; {new Date().getFullYear()} Catalyst Club. All rights reserved.
             </div>
           </div>
         </div>

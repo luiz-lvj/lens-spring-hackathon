@@ -7,6 +7,12 @@ import { useAuth } from '@/context/AuthContext';
 import { Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 
+import { evmAddress } from "@lens-protocol/client";
+import { fetchGroup, fetchGroups } from "@lens-protocol/client/actions";
+
+import { lensClient } from "@/lib/lens/client";
+import { useGroupByManager } from '@/hooks/useGroups';
+
 const GroupsPage = () => {
   const { user } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,6 +23,20 @@ const GroupsPage = () => {
     group.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     group.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+
+  const result = fetchGroup(lensClient, {
+    group: "0x45cF9E0D1d5Df6797e2983a551E32D14636beDbC"
+  }).then((group) => {
+    console.log("group", group);
+  });
+
+ 
+
+  const { data: groups, isLoading, error } = useGroupByManager(evmAddress("0x07737e07e08aeb91bdea62b3227d3c3272fe371c"));
+
+  console.log("groups", groups);
+
   
   return (
     <div className="space-y-8">
@@ -59,3 +79,5 @@ const GroupsPage = () => {
 };
 
 export default GroupsPage;
+
+

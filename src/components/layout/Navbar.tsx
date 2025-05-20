@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useAuth } from "@/context/AuthContext";
 import { Link } from "react-router-dom";
+import { ConnectKitButton } from "connectkit";
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -23,7 +23,7 @@ export function Navbar() {
             <div className="w-8 h-8 rounded-full bg-crypto-primary flex items-center justify-center">
               <span className="text-white font-bold">C</span>
             </div>
-            <span className="font-display font-bold text-xl">CryptoGroups</span>
+            <span className="font-display font-bold text-xl">Catalyst Club</span>
           </Link>
           
           <nav className="hidden md:flex gap-6">
@@ -47,6 +47,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <ConnectKitButton />
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

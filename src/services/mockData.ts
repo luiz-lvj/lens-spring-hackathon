@@ -53,15 +53,6 @@ export const groups: Group[] = [
     memberCount: 89,
     createdAt: new Date('2023-02-15')
   },
-  {
-    id: 'group3',
-    name: 'Web3 Ventures',
-    description: 'Funding the future of web3 projects',
-    managerId: 'user2',
-    coverImage: 'https://images.unsplash.com/photo-1642790551116-14a5e67d22b8?q=80&w=3432&auto=format&fit=crop',
-    memberCount: 212,
-    createdAt: new Date('2023-03-01')
-  }
 ];
 
 // Mock User-Group Memberships
